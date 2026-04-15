@@ -24,7 +24,6 @@ int Password::count_leading_characters(string phrase){
   letter and at least one lower-case letter
 */
 
-// Implementation D
 #include <cctype>
 bool Password::has_mixed_case(string str)
 {
@@ -44,19 +43,14 @@ bool Password::has_mixed_case(string str)
   return is_lower && is_upper;
 }
 
-/*
-// Implementation E
-bool Password::has_mixed_case(string str)
-{
-  bool found = false;
-  for(char c : str){
-    if( !found && c >= 'A' && c <= 'Z' ){
-      found = true;
-    }
-    else if( found && c >= 'a' && c <= 'z'){
-      return true;
-    }
-  }
-  return false;
+/* Receives a string and returns a count of how many case-sensitive unique characters there are. If there are duplicate instances of the same character it should only count as a single character. Even if characters look similar, as long as they have distinct ASCII values, they should qualify as unique characters. */
+unsigned int unique_characters(string str) {
+	bool seen[256] = {false}
+	int count = 0;
+	
+	for (char c : str) {
+		if(!seen[c]) {
+			// TODO: implement more
+		}
+	}
 }
-*/
